@@ -1,22 +1,13 @@
 #!/usr/bin/env groovy
 pipeline {
-  agent any
-
-  stages {
-    stage('Build') {
-        steps {
-            echo 'Building..'
+    agent {
+        docker { image 'node:12-alpine' }
+    }
+    stages {
+        stage('Test') {
+            steps {
+                sh 'node --version'
+            }
         }
     }
-    stage('Test') {
-        steps {
-            echo 'Testing..'
-        }
-    }
-    stage('Deploy') {
-        steps {
-            echo 'Deploying....'
-        }
-    }
-  }
 }
