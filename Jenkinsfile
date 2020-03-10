@@ -1,12 +1,12 @@
 #!/usr/bin/env groovy
 pipeline {
     agent {
-        docker { image 'node:12-alpine' }
+        label 'ubuntu64'
     }
     stages {
         stage('Test') {
             steps {
-                sh 'node --version'
+                sh 'pwd'
             }
         }
     }
