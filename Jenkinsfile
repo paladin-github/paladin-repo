@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 pipeline {
     agent {
-        label 'ubuntu64'
+        label 'master'
     }
     stages {
         stage('Test') {
