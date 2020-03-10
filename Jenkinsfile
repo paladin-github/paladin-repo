@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 pipeline {
-    agent any
+    agent {lable: "ubuntu64"}
     stages {
         stage('Test') {
             steps {
